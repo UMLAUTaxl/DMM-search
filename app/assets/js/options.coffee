@@ -1,147 +1,147 @@
-#= require OptionList
+# = Require OptionList
 
-###
-# service, floor 一覧
-###
+# # #
+# Service, floor list
+# # #
 
 # DMM.com
 options = [
 
-  { value: '', text: '全ての商品', children: [
-    { value: '', text: '全て' } ] }
+  {Value:'', text: 'All items', children: [
+    {Value:'', text: 'All'}]}
 
-  { value: 'lod', text: 'AKB48グループ', children: [
-    { value: '',      text: '全て' }
-    { value: 'akb48', text: 'AKB48' }
-    { value: 'ske48', text: 'SKE48' }
-    { value: 'nmb48', text: 'NMB48' }
-    { value: 'hkt48', text: 'HKT48' } ] }
+  {Value: 'lod', text: 'AKB48 group ', children: [
+    {Value:'', text: ' all '}
+    {Value: 'akb48', text: 'AKB48'}
+    {Value: 'ske48', text: 'SKE48'}
+    {Value: 'nmb48', text: 'NMB48'}
+    {Value: 'hkt48', text: 'HKT48'}]}
 
-  { value: 'digital', text: '動画', children: [
-    { value: '',      text: '全て' }
-    { value:'bandai', text: 'バンダイチャンネル' }
-    { value:'anime',  text: 'アニメ' }
-    { value:'video',  text: 'バラエティ' }
-    { value:'idol',   text: 'アイドル' }
-    { value:'cinema', text: '映画・ドラマ' }
-    { value:'fight',  text: '格闘技' } ] }
+  {Value: 'digital', text: ' Video ', children: [
+    {Value:'', text: ' All '}
+    {Value: 'bandai', text: ' Bandai Channel '}
+    {Value: 'anime', text: ' Anime '}
+    {Value: 'video', text: ' Variety '}
+    {Value: 'idol', text: ' Idol '}
+    {Value: 'cinema', text: ' Film and drama '}
+    {Value: 'fight', text: ' Martial Arts '} ]}
 
-  { value: 'monthly', text: '月額動画', children: [
-    { value: '',         text: '全て' }
-    { value: 'toei',     text: '東映' }
-    { value: 'animate',  text: 'アニメ' }
-    { value: 'idol',     text: 'アイドル' }
-    { value: 'cinepara', text: 'シネマパラダイス' }
-    { value: 'dgc',      text: 'ギャルコレ' }
-    { value: 'fleague',  text: 'Fリーグ' } ] }
+  {Value: 'monthly', text: ' Video Monthly ', children: [
+    {Value:'', text: ' All '}
+    {Value: 'toei', text: ' Toei Animation '}
+    {Value: 'animate', text: ' Anime '}
+    {Value: 'idol', text: ' Idol '}
+    {Value: 'cinepara', text: ' Cinema Paradise '}
+    {Value: 'dgc', text: ' Gyarukore '}
+    {Value: 'fleague', text: 'F League '} ]}
 
-  { value: 'digital_book', text: '電子書籍', children: [
-    { value: '',         text: '全て' }
-    { value: 'comic',    text: 'コミック' }
-    { value: 'novel',    text: '小説' }
-    { value: 'magazine', text: '雑誌' }
-    { value: 'photo',    text: '写真集' }
-    { value: 'audio',    text: 'オーディオブック' }
-    { value: 'movie',    text: '動画' } ] }
+  {Value: 'digital_book', text: ' E-book ', children: [
+    {Value:'', text: ' All '}
+    {Value: 'comic', text: ' Comic '}
+    {Value: 'novel', text: ' Novel '}
+    {Value: 'magazine', text: ' Magazine '}
+    {Value: 'photo', text: ' Photos '}
+    {Value: 'audio', text: ' Audio books '}
+    {Value: 'movie', text: ' Video '} ]}
 
-  { value: 'pcsoft', text: 'PCソフト', children: [
-    { value: '',         text: '全て' }
-    { value:'pcgame',    text: 'PCゲーム' }
-    { value:'pcsoft',    text: 'ソフトウェア' } ] }
+  {Value: 'pcsoft', text: 'PC software ', children: [
+    {Value:'', text: ' All '}
+    {Value: 'pcgame', text: 'PC game '}
+    {Value: 'pcsoft', text: ' Software '} ]}
 
-  { value: 'mono', text: '通販', children: [
-    { value: '',          text: '全て' }
-    { value: 'dvd',       text: 'DVD' }
-    { value: 'cd',        text: 'CD' }
-    { value: 'book',      text: '本・コミック' }
-    { value: 'game',      text: 'ゲーム' }
-    { value: 'hobby',     text: 'ホビー' }
-    { value: 'kaden',     text: '家電・パソコン' }
-    { value: 'houseware', text: '生活・日用品' }
-    { value: 'gourmet',   text: '食品・飲料' } ] }
+  {Value: 'mono', text: ' Mail order ', children: [
+    {Value:'', text: ' All '}
+    {Value: 'dvd', text: 'DVD'}
+    {Value: 'cd', text: 'CD'}
+    {Value: 'book', text: ' Books, Comics '}
+    {Value: 'game', text: ' Game '}
+    {Value: 'hobby', text: ' Hobby '}
+    {Value: 'kaden', text: ' Consumer electronics and personal computer '}
+    {Value: 'houseware', text: ' Life , daily necessities '}
+    {Value: 'gourmet', text: ' Food and beverage '} ]}
 
-  { value: 'rental', text: 'DVD/CDレンタル', children: [
-    { value: '',           text: '全て' }
-    { value: 'rental_dvd', text: '月額DVDレンタル' }
-    { value: 'rental_cd',  text: '月額CDレンタル' }
-    { value: 'ppr_dvd',    text: '単品DVDレンタル' }
-    { value: 'ppr_cd',     text: '単品CDレンタル' }
-    { value: 'set_dvd',    text: 'セットレンタル(DVD)' }
-    { value: 'set_cd',     text: 'セットレンタル(CD)' }
-    { value: 'comic',      text: 'コミック' } ] }
+  {Value: 'rental', text: 'DVD / CD rental ', children: [
+    {Value:'', text: ' All '}
+    {Value: 'rental_dvd', text: ' Monthly DVD rental '}
+    {Value: 'rental_cd', text: ' Monthly CD rental '}
+    {Value: 'ppr_dvd', text: ' Individual DVD rental '}
+    {Value: 'ppr_cd', text: ' CD single item rental '}
+    {Value: 'set_dvd', text: ' Set rental (DVD)'}
+    {Value: 'set_cd', text: ' Set rental (CD)'}
+    {Value: 'comic', text: ' Comic '} ]}
 
-  { value: 'nandemo', text: 'いろいろレンタル', children: [
-    { value: '',               text: '全て' }
-    { value: 'fashion_ladies', text: 'レディースファッション' }
-    { value: 'fashion_mens',   text: 'メンズファッション' }
-    { value: 'rental_iroiro',  text: 'いろいろ' } ] }
+  {Value: 'nandemo', text: ' Rental variety ', children: [
+    {Value:'', text: ' All '}
+    {Value: 'fashion_ladies', text: ' Women's Fashion '}
+    {Value: 'fashion_mens', text: ' Men's Clothing '}
+    {Value: 'rental_iroiro', text: ' Variety '} ]}
 ]
 
 # DMM.R18
 options18 = [
 
-  { value: '', text: '全ての商品', children: [
-    { value: '', text: '全て' } ] }
+  {Value:'', text: ' All products ', children: [
+    {Value:'', text: ' All '} ]}
 
-  { value: 'digital', text: '動画', children: [
-    { value: ''           , text: '全て' }
-    { value: 'videoa'     , text: 'ビデオ' }
-    { value: 'videoc'     , text: '素人' }
-    { value: 'nikkatsu'   , text: '成人映画' }
-    { value: 'anime'      , text: 'アニメ' }
-    { value: 'photo'      , text: '電子写真集' } ] }
+  {Value: 'digital', text: ' Video ', children: [
+    {Value:'', text: ' All '}
+    {Value: 'videoa', text: ' Video '}
+    {Value: 'videoc', text: ' Amateur '}
+    {Value: 'nikkatsu', text: ' Adult movie '}
+    {Value: 'anime', text: ' Anime '}
+    {Value: 'photo', text: ' E-photo book '} ]}
 
-  { value: 'monthly', text: '月額動画', children: [
-    { value: ''           , text: '全て' }
-    { value: 'shirouto'   , text: '素人ガールズコレクション' }
-    { value: 'nikkatsu'   , text: 'ピンク映画' }
-    { value: 'paradisetv' , text: 'パラダイステレビ' }
-    { value: 'animech'    , text: 'アダルトアニメ' }
-    { value: 'dream'      , text: 'ドリーム' }
-    { value: 'avstation'  , text: 'AVステーション' }
-    { value: 'playgirl'   , text: 'プレイガール' }
-    { value: 'alice'      , text: 'アリス' }
-    { value: 'crystal'    , text: 'クリスタル' }
-    { value: 'hmp'        , text: 'h.m.p' }
-    { value: 'waap'       , text: 'Waap' }
-    { value: 'momotarobb' , text: '桃太郎BB' }
-    { value: 'moodyz'     , text: 'MOODYZ' }
-    { value: 'prestige'   , text: 'プレステージ' }
-    { value: 'jukujo'     , text: '熟女チャンネル' }
-    { value: 'sod'        , text: 'ソフト・オン・デマンド' }
-    { value: 'mania'      , text: 'マニア' }
-    { value: 's1'         , text: 'エスワン ナンバーワンスタイル' }
-    { value: 'kmp'        , text: 'KMP' } ] }
+  {Value: 'monthly', text: ' Video Monthly ', children: [
+    {Value:'', text: ' All '}
+    {Value: 'shirouto', text: ' Amateur Girls Collection '}
+    {Value: 'nikkatsu', text: ' Pink film '}
+    {Value: 'paradisetv', text: ' TV Paradise '}
+    {Value: 'animech', text: ' Adult Anime '}
+    {Value: 'dream', text: ' Dream '}
+    {Value: 'avstation', text: 'AV station '}
+    {Value: 'playgirl', text: ' Playgirl '}
+    {Value: 'alice', text: ' Alice '}
+    {Value: 'crystal', text: ' Crystal '}
+    {Value: 'hmp', text: 'h.m.p'}
+    {Value: 'waap', text: 'Waap'}
+    {Value: 'momotarobb', text: ' Momotaro BB'}
+    {Value: 'moodyz', text: 'MOODYZ'}
+    {Value: 'prestige', text: ' Prestige '}
+    {Value: 'jukujo', text: ' Mature channel '}
+    {Value: 'sod', text: ' Soft On Demand '}
+    {Value: 'mania', text: ' Mania '}
+    {Value: 's1', text: ' Esuwan number one style '}
+    {Value: 'kmp', text: 'KMP'}]}
 
-  { value: 'ppm', text: '1円動画', children: [
-    { value: '', text: '全て' }
-    { value: 'video'      , text: 'ビデオ' }
-    { value: 'videoc'     , text: '素人' } ] }
+  {Value: 'ppm', text: '1 Yen video (PPM)', children: [
+    {Value:'', text: ' All '}
+    {Value: 'video', text: ' Video '}
+    {Value: 'videoc', text: ' Amateur '} ]}
 
-  { value: 'pcgame', text: '美少女ゲーム', children: [
-    { value: '', text: '全て' } ] }
+  {Value: 'pcgame', text: ' Girl games ', children: [
+    {Value:'', text: ' All '} ]}
 
-  { value: 'doujin',  text: '同人', children: [
-    { value: '', text: '全て' } ] }
+  {Value: 'doujin', text: ' Circle (doujin) ', children: [
+    {Value:'', text: ' All '} ]}
 
-  { value: 'book', text: '電子コミック', children: [
-    { value: '', text: '全て' } ] }
+  {Value: 'book', text: ' Digital Comics ', children: [
+    {Value:'', text: ' All '} ]}
 
-  { value: 'mono', text: '通販', children: [
-    { value: ''           , text: '全て' }
-    { value: 'dvd'        , text: 'DVD' }
-    { value: 'goods'      , text: '大人のおもちゃ' }
-    { value: 'anime'      , text: 'アニメ' }
-    { value: 'pcgame'     , text: '美少女ゲーム' }
-    { value: 'book'       , text: 'ブック' }
-    { value: 'doujin'     , text: '同人' } ] }
+  {Value: 'mono', text: ' Mail order ', children: [
+    {Value:'', text: ' All '}
+    {Value: 'dvd', text: 'DVD'}
+    {Value: 'goods',text: ' Sex toys '}
+    {Value: 'anime', text: ' Anime '}
+    {Value: 'pcgame', text: ' Anime Games '}
+    {Value: 'book', text: ' Books '}
+    {Value: 'doujin', text: ' Circle (doujin) '} ]}
 
-  { value: 'rental', text: 'DVDレンタル', children: [
-    { value: '', text: '全て' }
-    { value: 'rental_dvd' , text: '月額レンタル' }
-    { value: 'ppr_dvd'    , text: '単品レンタル' }
-    { value: 'set_dvd'    , text: 'セットレンタル' } ] }
+  {Value: 'rental', text: 'DVD rental ', children: [
+    {Value:'', text: ' All '}
+    {Value: 'rental_dvd', text: ' Monthly rental '}
+    {Value: 'ppr_dvd', text: ' Single item rental '}
+    {Value: 'set_dvd', text: ' Set rental '} ]}
 ]
 
-window.options = new OptionList(options)
-window.options18 = new OptionList(options18)
+window.options = new OptionList (options)
+window.options18 = new OptionList (options18)
